@@ -1,0 +1,35 @@
+h2
+{
+    width:60%;
+    border:1px solid black;
+    border-bottom:0;
+    margin:0 auto;
+    text-align:center;
+}
+.grid-12
+{
+    width:60%;
+    border:1px solid black;
+    margin:0 auto;
+    text-align:center;
+}
+.pricing-main-background {position:relative;}
+.plan-box-orange {background:orange;}
+.plan-box-green {background:green;}
+.grid-4
+{
+    display:inline-block;
+    width:30%;
+    height:50px;
+    margin-top:25px;
+}
+.grid-4:nth-of-type(1)
+{
+    position:absolute;
+    left:-10%;
+}
+.grid-4:nth-of-type(3)
+{
+    position:absolute;
+    right:-10%;
+}

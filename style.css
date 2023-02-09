@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+img {
+    display: block;
+}
+
+body {
+    background: rgb(101, 101, 231);
+}
+
+.pagewrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(101, 101, 231, 1) 0%, rgba(175, 103, 233, 1) 100%);
+}
+
+main {
+    margin-top: 35vw;
+    background-color: white;
+    background-image: url("./images/bg-pattern-mobile.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 60vw;
+    border-radius: 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 85vw;
+    padding: 5vw;
+    box-shadow: 0vw 5vw 6vw -6vw #1d1e35;
+}
+
+.upper-part {
+    position: relative;
+    width: 60vw;
+    top: -32vw;
+    display: block;
+    margin-bottom: -18vw;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 6vw;
+    text-align: center;
+}
+
+.faq {
+    position: relative;
+    border-bottom: 1px solid #e7e7e9;
+    margin-bottom: 1.5rem;
+}
+
+.answer {
+    max-height: 0;
+    font-size: 14px;
+    overflow: hidden;
+    padding-left: 3vw;
+    padding-right: 9vw;
+    transition: max-height 0.5s ease;
+    margin-bottom: 1.2rem;
+    color: #787887;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+h4 {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #787887;
+    transition: color 0.5s ease;
+}
+
+label {
+    cursor: pointer;
+}
+
+label {
+    position: relative;
+    display: block;
+    padding-right: 2rem;
+}
+
+label::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    right: 1rem;
+    border-right: 6px solid #ff3030;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    margin-top: -0.3rem;
+}
+
+input[type="checkbox"]:checked~h4 label::before {
+    border-left: 6px solid transparent;
+    border-top: 6px solid #ff3030;
+    border-right: 6px solid transparent;
+    margin-top: -0.3rem;
+}
+
+
+input[type="checkbox"]:checked~h4~p {
+    max-height: 280px;
+}
+
+input[type="checkbox"]:checked~h4 {
+    color: #4a4b5e;
+}
+
+
+@media (min-width: 600px) {
+    h1 {
+        text-align: left;
+        font-size: 2.5rem;
+        margin-bottom: 3vw;
+    }
+
+    main {
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        background-image: url("./images/bg-pattern-desktop.svg");
+        background-position: left;
+        background-size: 64vw;
+        background-position: -35vw;
+        width: 70vw;
+        border-radius: 1.5vw;
+        padding: 3vw 5vw 3vw 5vw;
+        overflow: hidden;
+    }
+
+    .upper-part {
+        position: relative;
+        width: 50%;
+        top: 0;
+        margin-bottom: 0;
+    }
+
+    .upper-img {
+        position: relative;
+        content: url("./images/illustration-woman-online-desktop.svg");
+        left: -10vw;
+        width: 34vw;
+    }
+
+    .text-container {
+        width: 50%;
+    }
+
+    .box-desktop {
+        content: url("./images/illustration-box-desktop.svg");
+        position: absolute;
+        align-items: center;
+        left: 8vw;
+        width: 14vw;
+        padding-top: 7vw;
+        z-index: 1;
+    }
+
+    .answer {
+        padding-left: 1vw;
+        padding-right: 4vw;
+        margin-bottom: 1rem;
+    }
+
+    .faq {
+        margin-bottom: 1rem;
+    }
+}
